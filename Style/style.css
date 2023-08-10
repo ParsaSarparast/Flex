@@ -1,0 +1,205 @@
+@font-face {
+    font-family: sansbold;
+    src: url(../Fonts/Tisa\ Sans\ Pro\ Bold.ttf);
+}
+@font-face {
+    font-family: sansreg;
+    src: url(../Fonts/Tisa\ Sans\ Pro\ Regular.ttf);
+}
+@font-face {
+    font-family: lale;
+    src: url(../Fonts/Lalezar-Regular.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: linear-gradient(to right, #243B55, #141E30);
+    direction: rtl;
+}
+.div_header{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    background-color: transparent;
+}
+.img_logo {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+li{
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-family: sansreg;
+    font-size: 25px;
+    list-style: none;
+    margin-left: 70px;
+    cursor: pointer;
+}
+.li1::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: gold;
+    transition: width 0.25s ease-out;
+}
+.li1:hover::before{
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+.input_search {
+    text-align: center;
+    font-family: sansreg;
+    margin-right: 200px;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+}
+.burger_menu{
+    display: none;
+}
+.search_icon {
+    display: none;
+}
+.div_section1{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 450px;
+    width: 100%;
+    margin-top: 80px;
+}
+.div_pizza, .div_burger, .div_fried{
+    position: relative;
+    display: inline-block;
+    font-family: lale;
+    font-size: 25px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid gold;
+    cursor: pointer;
+    transition: 50ms ease-in-out;
+}
+.img_pizza, .img_burger, .img_fried{
+    display: block;
+    width: 450px;
+    height: 450px;
+}
+.overlay{
+    position: absolute;
+    transition: all 0.3s ease;
+    opacity: 0;
+    background-color: black;
+
+}
+.text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.overlayleft{
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+}
+.overlayright{
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    background-color: #000000db !important;
+}
+.overlayfade{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000db !important;
+}
+.div_pizza:hover .overlayright, .div_fried:hover .overlayleft  {
+    width: 100%;
+}
+.div_pizza:hover .overlay , .div_fried:hover .overlay , .div_burger:hover .overlay {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1164px){
+    .input_search {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 1052px ){
+    .div_header{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    .div_ul{
+        display: none;
+    }
+    .div_input_search{
+        display: none;
+    }
+    .burger_menu, .search_icon{
+        display: block;
+        width: 40px; height: 40px;
+    }
+
+}
+@media only screen and (max-width: 1350px ){
+    .div_section1{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 500px;
+        width: 100%;
+        margin-top: 500px;
+      
+}
+}
+@media only screen and (max-width: 1224px){
+    li{
+        margin-left: 30px;
+    }
+
+}
